@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather in {{ weather.city }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #83a4d4, #b6fbff);
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .weather-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+            display: inline-block;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .detail {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-card">
+        <h1>Weather in {{ weather.city }}</h1>
+        <div class="detail">🌡 Temperature: {{ weather.temp_c }}°C / {{ weather.temp_f }}°F</div>
+        <div class="detail">🤔 Feels Like: {{ weather.feels_c }}°C / {{ weather.feels_f }}°F</div>
+        <div class="detail">💧 Humidity: {{ weather.humidity }}%</div>
+        <div class="detail">🌬 Wind Speed: {{ weather.wind }} m/s</div>
+        <div class="detail">☁ Condition: {{ weather.description }}</div>
+        <div class="detail">🌅 Sunrise: {{ weather.sunrise }}</div>
+        <div class="detail">🌇 Sunset: {{ weather.sunset }}</div>
+    </div>
+</body>
+</html>
+
