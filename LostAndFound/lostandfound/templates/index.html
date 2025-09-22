@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local School Lost & Found</title>
+    <!-- Correct way to load CSS in Flask -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+   <header>
+        <h1>Local School Lost & Found</h1>
+    </header>
+
+
+    <section class="homepage">
+        <div class="box1">
+        <h2>Lost Items!</h2>
+        <p>
+Every day, students misplace things on campus — from keys and water bottles to laptops and textbooks.<br>
+Our Lost & Found service is here to help you reconnect with your belongings. <br>
+Asking about lost property is always free, you can stop by the student services desk, call our campus hotline at +358 40 xxx xxxx, or create a report for a item you've found using the link below. <br>
+        </p>
+          <div class="buttons">
+            <p> <strong>Choose an action:</strong>   <br>
+            <a href="{{ url_for('find_item') }}" class="btn">Find an Item</a>
+            <a href="{{ url_for('submit_item') }}" class="btn">Submit an Item</a>
+        </div>
+        </div> 
+    </section>
+    <footer>
+    <p>Contact us: 
+        <a href="mailto:support@lostandfound.fi">support@xxxxxx.fi</a> | 
+        <a href="tel:+358401234567">+358 40 xxx xxxx</a>
+    </p>
+    <p>&copy; 2025 Lost & Found</p>
+</footer>
+
+</body>
+</html>

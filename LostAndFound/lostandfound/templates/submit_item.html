@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local School Lost & Found</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/submit.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Submit a Lost Item</h1>
+        </div>
+
+        <div class="header-center">
+            <a href="{{ url_for('find_item') }}" class="btn">Find a Item</a>
+        </div>
+
+        <div class="header-right">
+            <a href="{{ url_for('homepage_en') }}" class="btn">🏠 Back to Homepage</a>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="box3">
+            <form action="{{ url_for('submit_item') }}" method="post" enctype="multipart/form-data">
+                <label>Item Type:</label><br>
+                <input type="text" name="item_type" required><br><br>
+
+                <label>Description:</label><br>
+                <textarea name="description" rows="4" cols="40" required></textarea><br><br>
+
+                <label>Upload Photo (optional):</label><br>
+                <input type="file" name="photo" accept=".png,.jpg,.jpeg"><br><br>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact us: 
+            <a href="mailto:support@lostandfound.fi">support@xxxxxx.fi</a> | 
+            <a href="tel:+358401234567">+358 40 xxx xxxx</a>
+        </p>
+        <p>&copy; 2025 Lost & Found</p>
+    </footer>
+</body>
+</html>
